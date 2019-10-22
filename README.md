@@ -1,2 +1,2 @@
 # RSA
-Exercicio RSA - Segurança de Sistemas - PUCRS 2019-2
+Exercicio RSA - Segurancaa de Sistemas - PUCRS 2019-2
