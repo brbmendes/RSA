@@ -4,8 +4,8 @@ public class MultiplicarPrimos {
 	public static void main(String[] args) {
         if (args.length < 2)
         {
-            System.out.println("Execute o programa informando 2 números primos: p e q");
-            System.out.println("\t5 7");
+            System.out.println("Execute o programa informando 2 números primos, p e q");
+            System.out.println("Ex: 5 7");
             System.exit(0);
         } else {
         	BigInteger p = new BigInteger(args[0]);

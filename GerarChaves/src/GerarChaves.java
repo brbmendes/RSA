@@ -20,6 +20,14 @@ public class GerarChaves {
 		System.out.println("Numero primo q:\n");
 		BigInteger q = GerarPrimo.Gerar(bits);
 		
+		System.out.println("Modulo N:\n");
+		BigInteger N = MultiplicarPrimos.Multiplicar(p, q);
+		
+		System.out.println("Phi(N) phi:\n");
+		BigInteger phi = CalcularPhi.Calcular(p, q);
+		
+		System.out.println("Euler e:\n");
+		BigInteger e = GerarEuler.gerar();
 		
 	}
 
