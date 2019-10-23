@@ -1,8 +1,11 @@
+import jar.MultiplicarPrimos.jar
 
 public class GerarChaves {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println("Gerar chaves");
+		
+		
 
 	}
 
