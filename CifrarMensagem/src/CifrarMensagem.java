@@ -1,25 +1,31 @@
 import java.math.BigInteger;
+import java.util.Scanner;
 
 
 public class CifrarMensagem {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		if(args.length < 3){
-			System.out.println("Execute o programa informando 3 números: a mensagem convertida M, euler e, e o modulo N:");
-			System.out.println("\t687236487263487324 7 55");
+		if(args.length < 2){
+			System.out.println("Execute o programa informando 2 números: euler e, e o modulo N:");
+			System.out.println("Ex: 7 55");
 		} else {
-			BigInteger M = new BigInteger(args[0]);
-			int e = Integer.parseInt(args[1]);
-			BigInteger N = new BigInteger(args[2]);
+			
+			System.out.println("Digite a mensagem que sera cifrada:");
+			Scanner scanner = new Scanner(System.in);
+			String mensagem = scanner.nextLine();
+			
+			BigInteger M = ConverterMensagemParaNumerico.ConverterDeString(mensagem);
+			BigInteger e = new BigInteger(args[0]);
+			BigInteger N = new BigInteger(args[1]);
+			
 			BigInteger mensagemCifrada_C = cifrarMensagem(M,e,N);
 			System.out.println(mensagemCifrada_C);
 		}
 	}
 	
-	private static BigInteger cifrarMensagem(BigInteger M, int e, BigInteger N){
-		BigInteger mElevedoE = M.pow(e);
-		BigInteger divisao_resto[] = mElevedoE.divideAndRemainder(N);
-		BigInteger mensagemCifrada = divisao_resto[1];
+	private static BigInteger cifrarMensagem(BigInteger M, BigInteger e, BigInteger N){
+		BigInteger mensagemCifrada = M.modPow(e,N);
 		return mensagemCifrada;
 	}
 }

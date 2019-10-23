@@ -16,6 +16,10 @@ public class CalcularDInversoEuler {
         }
 	}
 	
+	public static BigInteger Calcular(BigInteger e, BigInteger phi) {
+		return calcularD(e,phi);
+	}
+	
 	private static BigInteger calcularD(BigInteger e, BigInteger phi) {
 		return e.modInverse(phi);
 	}

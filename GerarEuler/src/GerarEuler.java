@@ -14,7 +14,7 @@ public class GerarEuler {
         	BigInteger e = GerarNumEuler(args[0]);
         	BigInteger zero = new BigInteger("0");
     		if(e.equals(zero)) {
-    			System.out.println("Após 10000 tentativas, não foi possível encontrar e.");
+    			System.out.println("Após 10.000 tentativas, não foi possível encontrar e.");
     		} else {
     			System.out.println(e);
     		}
@@ -32,15 +32,14 @@ public class GerarEuler {
 	
 	private static BigInteger GerarNumEuler(BigInteger phi) {
 		Random rnd = new Random();
-		BigInteger e = BigInteger.ZERO;
-		
+		BigInteger e = BigInteger.ZERO; 	
 		for(int i = 0 ; i < 10000; i++) {
 			long euler = rnd.nextLong();
 			e = BigInteger.valueOf(euler);
 			BigInteger relativamentePrimo = BigInteger.ZERO;
             relativamentePrimo = MDC(e, phi);
             if(relativamentePrimo.equals(BigInteger.ONE)) {
-            	return BigInteger.ONE;
+            	return e;
             }
 		}
 		return BigInteger.ZERO;
