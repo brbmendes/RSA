@@ -2,11 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="/CalcularDInversoEuler/jar/CalcularDInversoEuler.jar"/>
-	<classpathentry kind="lib" path="/CalcularPhi/jar/CalcularPhi.jar"/>
-	<classpathentry kind="lib" path="/GerarEuler/jar/GerarEuler.jar"/>
-	<classpathentry kind="lib" path="/GerarPrimo/jar/GerarPrimo.jar"/>
-	<classpathentry kind="lib" path="/MultiplicarPrimos/jar/MultiplicarPrimos.jar"/>
-	<classpathentry kind="lib" path="/TestarEuler/jar/TestarEuler.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CalcularDInversoEuler"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CalcularPhi"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerarEuler"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerarPrimo"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MultiplicarPrimos"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TestarEuler"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

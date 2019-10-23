@@ -17,6 +17,10 @@ public class MultiplicarPrimos {
 
 	}
 	
+	public static BigInteger Multiplicar(BigInteger p, BigInteger q) {
+		return MultiplicarNumerosPrimos(p,q);
+	}
+	
 	private static BigInteger MultiplicarNumerosPrimos(BigInteger p, BigInteger q) {
 		return p.multiply(q);
 	}
