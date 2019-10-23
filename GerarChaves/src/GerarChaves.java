@@ -27,7 +27,7 @@ public class GerarChaves {
 		BigInteger phi = CalcularPhi.Calcular(p, q);
 		
 		System.out.println("Euler e:\n");
-		BigInteger e = GerarEuler.gerar();
+		BigInteger e = GerarEuler.Gerar(phi);
 		
 	}
 

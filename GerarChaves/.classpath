@@ -7,6 +7,5 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/GerarEuler"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GerarPrimo"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/MultiplicarPrimos"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/TestarEuler"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
