@@ -11,14 +11,14 @@ public class GerarChaves {
 		System.out.println("Informe o número de bits da chave:");
 		
 		Scanner entradaTexto = new Scanner(System.in);
-		int bits = entradaTexto.nextInt();
+		int bytes = entradaTexto.nextInt();
 		System.out.println("\n");
 		System.out.println("Numero primo p:");
-		BigInteger p = GerarPrimo.Gerar(bits);
+		BigInteger p = GerarPrimo.Gerar(bytes);
 		System.out.println("\t" + p);
 		System.out.println("");
 		System.out.println("Numero primo q:");
-		BigInteger q = GerarPrimo.Gerar(bits);
+		BigInteger q = GerarPrimo.Gerar(bytes);
 		System.out.println("\t" + q);
 		System.out.println("");
 		System.out.println("Modulo N:");
@@ -46,10 +46,10 @@ public class GerarChaves {
 				System.exit(-1);
 			}
 		}
-		System.out.println("\t" + e);
-		
+		System.out.println("\n\t" + e);
+		System.out.println("");
 		System.out.println("Inverso de Euler d:");
-		BigInteger d = GerarEuler.Gerar(phi);
+		BigInteger d = CalcularDInversoEuler.Calcular(e,phi);
 		System.out.println("\t" + d);
 		
 		System.out.println("\n");

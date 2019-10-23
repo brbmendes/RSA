@@ -27,7 +27,6 @@ public class GerarPrimo {
 		BigInteger resultado = BigInteger.ZERO;
 		BigInteger base = new BigInteger("2");
 		BigInteger primo = BigInteger.ZERO;
-		
 		do {
 			primo = new BigInteger(numBits,0,new Random());
 			resultado = base.modPow(primo.subtract(BigInteger.ONE),primo);

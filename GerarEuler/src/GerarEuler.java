@@ -34,7 +34,7 @@ public class GerarEuler {
 		Random rnd = new Random();
 		BigInteger e = BigInteger.ZERO; 	
 		for(int i = 0 ; i < 10000; i++) {
-			long euler = rnd.nextLong();
+			int euler = rnd.nextInt();
 			e = BigInteger.valueOf(euler);
 			BigInteger relativamentePrimo = BigInteger.ZERO;
             relativamentePrimo = MDC(e, phi);
