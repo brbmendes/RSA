@@ -17,6 +17,10 @@ public class DecifrarMensagem {
 		}
 	}
 	
+	public static BigInteger Decifrar(BigInteger mc, BigInteger d, BigInteger N) {
+		return decifrarMensagem(mc,d,N);
+	}
+	
 	private static BigInteger decifrarMensagem(BigInteger mc, BigInteger d, BigInteger N){
 		BigInteger mensagemConvertida = mc.modPow(d,N);
 		return mensagemConvertida;

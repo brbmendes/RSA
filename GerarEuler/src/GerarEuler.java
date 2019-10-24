@@ -34,7 +34,7 @@ public class GerarEuler {
 		Random rnd = new Random();
 		BigInteger e = BigInteger.ZERO; 	
 		for(int i = 0 ; i < 10000; i++) {
-			int euler = rnd.nextInt();
+			int euler = rnd.nextInt(10000000);
 			e = BigInteger.valueOf(euler);
 			BigInteger relativamentePrimo = BigInteger.ZERO;
             relativamentePrimo = MDC(e, phi);
@@ -71,5 +71,23 @@ public class GerarEuler {
 		retArray[1] = auxArray[2];
 		retArray[2] = auxArray[1].subtract((divisao_resto[0]).multiply(auxArray[2]));
 		return retArray;
+	}
+	
+	public static BigInteger TestarEuler(BigInteger e, BigInteger phi) {
+		if(e.equals(BigInteger.ZERO)) {
+			boolean encontrouE = false;
+			for(int i = 0 ; i < 3 ; i++) {
+				e = GerarEuler.Gerar(phi);
+				if(!e.equals(BigInteger.ZERO)) {
+					encontrouE = true;
+					break;
+				}
+			}
+			if(!encontrouE) {
+				System.out.println("Não foi possivel encontrar e após 30.000 tentativas");
+				System.exit(-1);
+			}
+		}
+		return e;
 	}
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CalcularDInversoEuler"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CalcularPhi"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CifrarMensagem"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ConverterMensagemParaNumerico"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/DecifrarMensagem"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerarEuler"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerarPrimo"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MultiplicarPrimos"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerarChaves"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

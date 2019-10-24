@@ -24,6 +24,10 @@ public class CifrarMensagem {
 		}
 	}
 	
+	public static BigInteger Cifrar(BigInteger M, BigInteger e, BigInteger N) {
+		return cifrarMensagem(M,e,N);
+	}
+
 	private static BigInteger cifrarMensagem(BigInteger M, BigInteger e, BigInteger N){
 		BigInteger mensagemCifrada = M.modPow(e,N);
 		return mensagemCifrada;

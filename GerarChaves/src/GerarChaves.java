@@ -11,14 +11,14 @@ public class GerarChaves {
 		System.out.println("Informe o número de bits da chave:");
 		
 		Scanner entradaTexto = new Scanner(System.in);
-		int bytes = entradaTexto.nextInt();
+		int bits = entradaTexto.nextInt();
 		System.out.println("\n");
 		System.out.println("Numero primo p:");
-		BigInteger p = GerarPrimo.Gerar(bytes);
+		BigInteger p = GerarPrimo.Gerar(bits);
 		System.out.println("\t" + p);
 		System.out.println("");
 		System.out.println("Numero primo q:");
-		BigInteger q = GerarPrimo.Gerar(bytes);
+		BigInteger q = GerarPrimo.Gerar(bits);
 		System.out.println("\t" + q);
 		System.out.println("");
 		System.out.println("Modulo N:");
@@ -31,22 +31,8 @@ public class GerarChaves {
 		System.out.println("");
 		System.out.println("Euler e:");
 		BigInteger e = GerarEuler.Gerar(phi);
-		
-		if(e.equals(BigInteger.ZERO)) {
-			boolean encontrouE = false;
-			for(int i = 0 ; i < 3 ; i++) {
-				e = GerarEuler.Gerar(phi);
-				if(!e.equals(BigInteger.ZERO)) {
-					encontrouE = true;
-					break;
-				}
-			}
-			if(!encontrouE) {
-				System.out.println("Não foi possivel encontrar e após 30.000 tentativas");
-				System.exit(-1);
-			}
-		}
-		System.out.println("\n\t" + e);
+		e = GerarEuler.TestarEuler(e, phi);
+		System.out.println("\t" + e);
 		System.out.println("");
 		System.out.println("Inverso de Euler d:");
 		BigInteger d = CalcularDInversoEuler.Calcular(e,phi);
@@ -56,6 +42,7 @@ public class GerarChaves {
 		
 		System.out.println("Chave Publica: \nPK\n{\n\te: "+ e +"\n\tN: "+ N +"\n}");
 		System.out.println("Chave Privada: \nSK\n{\n\td: "+ d +",\n\tp: "+ p +",\n\tq: "+ q +"\n}");
+		System.out.println("");
 	}
 
 }
