@@ -20,7 +20,6 @@ public class principal {
 		Scanner s = new Scanner(System.in);
 		int operacao;
 		
-		
 		while(true) {
 			System.out.println("Informe a operacao desejada: ");
 			System.out.println("1 - Gerar chaves");
