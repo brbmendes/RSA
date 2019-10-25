@@ -12,7 +12,14 @@ public class GerarPrimo {
         } else {
         	int _numBits = Integer.parseInt(args[0]);
             BigInteger primo = GerarNumPrimo(_numBits);
-            System.out.println(primo);
+            if(primo.equals(BigInteger.valueOf(-1))){
+            	System.out.println("Não foi possivel encontrar um numero primo apos 10000 tentativas.");
+            	
+            } else if(primo.equals(BigInteger.ZERO)){
+            	System.out.println("Quantidade de bits deve ser maior que 1000.");
+            } else {
+            	System.out.println(primo);
+            }
         }
 	}
 	
@@ -27,11 +34,16 @@ public class GerarPrimo {
 		BigInteger resultado = BigInteger.ZERO;
 		BigInteger base = new BigInteger("2");
 		BigInteger primo = BigInteger.ZERO;
+		int contador = 1;
 		do {
+			if(contador > 10000) break;
 			primo = new BigInteger(numBits,0,new Random());
 			resultado = base.modPow(primo.subtract(BigInteger.ONE),primo);
 		} while(!resultado.equals(BigInteger.ONE));
 		
+		if(contador > 10000){
+			return BigInteger.valueOf(-1);
+		}
 		return primo;
 	}
 }

@@ -19,6 +19,11 @@ public class CifrarMensagem {
 			BigInteger e = new BigInteger(args[0]);
 			BigInteger N = new BigInteger(args[1]);
 			
+			if(M.compareTo(N) > 0){
+				System.out.println("A mensagem nao pode ser cifrada pois seu tamanho e maior que o modulo N.");
+				return;
+			}
+
 			BigInteger mensagemCifrada_C = cifrarMensagem(M,e,N);
 			System.out.println(mensagemCifrada_C);
 		}

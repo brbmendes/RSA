@@ -15,10 +15,29 @@ public class GerarChaves {
 		System.out.println("\n");
 		System.out.println("Numero primo p:");
 		BigInteger p = GerarPrimo.Gerar(bits);
+		if(p.equals(BigInteger.valueOf(-1))){
+        	System.out.println("Não foi possivel encontrar um numero primo apos 10000 tentativas.");
+        	System.out.println("\n");
+        	return;
+        } else if(p.equals(BigInteger.ZERO)){
+        	System.out.println("Quantidade de bits deve ser maior que 1000.");
+        	System.out.println("\n");
+        	return;
+        } 
 		System.out.println("\t" + p);
 		System.out.println("");
 		System.out.println("Numero primo q:");
 		BigInteger q = GerarPrimo.Gerar(bits);
+		if(q.equals(BigInteger.valueOf(-1))){
+        	System.out.println("Não foi possivel encontrar um numero primo apos 10000 tentativas.");
+        	System.out.println("\n");
+        	return;
+        	
+        } else if(q.equals(BigInteger.ZERO)){
+        	System.out.println("Quantidade de bits deve ser maior que 1000.");
+        	System.out.println("\n");
+        	return;
+        }
 		System.out.println("\t" + q);
 		System.out.println("");
 		System.out.println("Modulo N:");
